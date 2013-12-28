@@ -15,6 +15,4 @@ timesheets
 
 ## License
 
-(C) 2014, [Typework, bvba][typework]
-
-[typework]: http://typework.com/ 'Typework'
+MIT
