@@ -1,11 +1,13 @@
-var Router = Ember.Router.extend();
+var Router = Ember.Router.extend({ location: 'history' });
 
 Router.map(function() {
+
+  this.route('login');
+
   this.resource('projects', function(){
-    this.route('new');
     this.route('show', { path: ':project_id' });
-    this.route('edit', { path: ':project_id/edit' });
   });
+
 });
 
 export default Router;

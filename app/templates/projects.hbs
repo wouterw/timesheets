@@ -1,3 +1,31 @@
-{{#each}}
-  {{name}}
-{{/each}}
+<header class="row">
+  <div class="col-xs-10">
+    <h1>Projects</h1>
+  </div>
+  <div class="col-xs-2">
+    <button {{action 'createProject'}} class="btn btn-success btn-block">Create Project</button>
+  </div>
+</header>
+
+<div class="row">
+  <div class="col-lg-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Client</th>
+          <th>Status</th>
+        <tr>
+      </thead>
+      <tbody>
+        {{#each}}
+          {{#link-to 'projects.show' this tagName="tr"}}
+            <td>{{name}}</td>
+            <td>{{client}}</td>
+            <td>{{status}}</td>
+          {{/link-to}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -19,4 +19,8 @@ Ember.RSVP.configure('onerror', function(error) {
   }
 });
 
+// initializers
+// TODO: autoload app/initializers/*.js and initialize
+import 'appkit/initializers/authentication';
+
 export default App;
